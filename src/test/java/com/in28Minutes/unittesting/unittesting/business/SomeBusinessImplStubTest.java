@@ -3,19 +3,23 @@ package com.in28Minutes.unittesting.unittesting.business;
 import com.in28Minutes.unittesting.unittesting.data.SomeDataService;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnitRunner;
+
 import static org.mockito.Mockito.mock;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.when;
 
+@RunWith(MockitoJUnitRunner.class)
 public class SomeBusinessImplStubTest {
 
-    SomeBusinessImpl someBusiness = new SomeBusinessImpl();
-    SomeDataService someDataServiceMock = mock(SomeDataService.class);
+    @InjectMocks
+    SomeBusinessImpl someBusiness;
+    @Mock
+    SomeDataService someDataServiceMock;
 
-    @Before
-    public void beforeEachTest(){
-        someBusiness.setSomeDataService(someDataServiceMock);
-    }
 
     @Test
     public void CalculateSumUsingDataService(){
