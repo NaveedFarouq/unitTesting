@@ -6,9 +6,11 @@ import static org.junit.Assert.*;
 
 public class SomeBusinessImplTest {
 
+    SomeBusinessImpl someBusiness = new SomeBusinessImpl();
+
     @Test
     public void CalculateSumUsingDataService(){
-        SomeBusinessImpl someBusiness = new SomeBusinessImpl();
+
         int actualResult = someBusiness.CalculateSum(new int[]{1,2,3});
         int expectedResult = 6;
         assertEquals(expectedResult, actualResult);
@@ -16,7 +18,7 @@ public class SomeBusinessImplTest {
 
     @Test
     public void calculateSumTestOneValue(){
-        SomeBusinessImpl someBusiness = new SomeBusinessImpl();
+
         int actualResult = someBusiness.CalculateSum(new int[]{3});
         int expectedResult = 3;
         assertEquals(expectedResult, actualResult);
