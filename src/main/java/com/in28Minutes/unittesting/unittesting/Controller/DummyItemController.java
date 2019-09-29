@@ -24,7 +24,7 @@ public class DummyItemController {
         return itemFromBusinessService.retrieveHardcodedItem();
     }
 
-    @GetMapping("/all-item-from-business-service")
+    @GetMapping("/all-item-from-database")
     public List<Item> AllItemFromBusinessService() {
         return itemFromBusinessService.retrieveAllItems();
     }
