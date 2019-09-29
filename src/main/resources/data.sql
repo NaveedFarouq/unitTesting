@@ -1,0 +1,1 @@
+insert into item(id, name, price, quatity) values(10001,'Item1',10, 20);
