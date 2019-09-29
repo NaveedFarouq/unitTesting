@@ -1,10 +1,17 @@
 package com.in28Minutes.unittesting.unittesting.Model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Transient;
+
+
 public class Item {
+
 
     private int id;
     private String name;
     private int price;
+
     private int quatity;
 
     public Item(int id, String name, int price, int quatity) {
